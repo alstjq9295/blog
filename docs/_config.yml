@@ -1,1 +1,8 @@
+title: "[Dev] Wassup's Blog"
+#logo: /assets/img/logo.png
+description: "끄적이든 기록하든 습관 들이기"
+url: "https://alstjq9295.github.io"
+baseurl: "/blog"
+#show_downloads: true
+#google_analytics:
 theme: jekyll-theme-minimal
