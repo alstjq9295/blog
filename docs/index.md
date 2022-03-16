@@ -8,6 +8,7 @@ For my Git blog
 5. [ElasticSearch 한국어 형태소 분석기 Nori Analyzer 에 관하여](https://alstjq9295.github.io/blog/docs/2022-02-12-1st)
 6. [Docker 기본 개념](https://alstjq9295.github.io/blog/docs/2022-02-19-1st)
 7. [Docker 로 ElasticSearch 클러스터 구성](https://alstjq9295.github.io/blog/docs/2022-03-04-1st)
-8. [8번째는?](https://alstjq9295.github.io/blog/)
+8. [Docker 로 Postgres 설치 및 Nori Userdict 관련](https://alstjq9295.github.io/blog/docs/2022-03-14-1st)
 9. [9번째는?](https://alstjq9295.github.io/blog/)
+10. [10번째는?](https://alstjq9295.github.io/blog/)
 
