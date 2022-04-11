@@ -1,26 +1,5 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
-
-# Setup
-title:            "[Dev] Wassup's Blog"
-tagline:          "A Jekyll theme"
-description:      "끄적이든 기록하든 습관 들이기"
-url:              "https://alstjq9295.github.io"
-baseurl:          "/blog"
-
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
+title: Architect theme
+description: Architect is a theme for GitHub Pages.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-architect
