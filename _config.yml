@@ -3,15 +3,15 @@ description:      "끄적이든 기록하든 습관 들이기"
 url:              "https://alstjq9295.github.io"
 baseurl:          "/blog/index"
 
-author:
-  name:           "Wassup"
-  avatar:         ""
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      comments: true
+#author:
+#  name:           "Wassup"
+#  avatar:         ""
+#
+#defaults:
+#  - scope:
+#      path: ""
+#      type: posts
+#    values:
+#      comments: true
 
 theme: jekyll-theme-architect
