@@ -2,7 +2,7 @@ title: [Dev] Wassup's Blog
 description: 끄적이든 기록하든 습관 들이기
 url: https://alstjq9295.github.io
 baseurl: /blog
-show_downloads:   true
+show_downloads:   false
 
 #defaults:  # 페이지의 머리말에 선언하지 않아도 아래 내용들은 기본값으로 적용됨.
 #  - scope:
