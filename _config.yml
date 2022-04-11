@@ -1,26 +1,59 @@
-title: [Dev] Wassup's Blog
-description: 끄적이든 기록하든 습관 들이기
-url: https://alstjq9295.github.io
-baseurl: /blog
-show_downloads:   false
+# Setup
+title: Not Pure Poole
+description: A simple, beautiful, and powerful Jekyll theme for blogs
+url: https://vszhub.github.io
+avatar: /avatar.jpeg
+paginate: 5
+permalink: pretty
+cover_image: /bg.jpeg
 
-#defaults:  # 페이지의 머리말에 선언하지 않아도 아래 내용들은 기본값으로 적용됨.
-#  - scope:
-#      path: ""          # 모든 경로의 페이지에 적용
-#      type: posts       # 포스트 타입의 페이지에 적용
-#    values:
-#      layout: single    # single 레이아웃을 적용
-#      author_profile: true  # 내 프로필을 사이드바에 표시함
-#      read_time: false      # '한 포스트를 다 읽는데 n분 걸림' 이라는 문구를 붙여주는 완독 추측 시간
-#      comments: true        # 댓글 기능 활성화
-#      share: true       # 소셜 공유 기능 활성화
-#      related: true     # 관련 포스트 추천 활성화
-#      toc: true         # 현재 페이지의 목차 보기 활성화
-#      sidebar:          # (내 커스텀 변수) 블로그 목차 보기
-#        nav: main-sidebar   # (내 커스텀 변수) /_data/navigation.yml에 main-sidebar의 내용을 정의
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
 
-theme: jekyll-theme-architect
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - scripts/
+  - not-pure-poole.gemspec
 
-#remote_theme: pages-themes/architect@v0.2.0
-#plugins:
-#- jekyll-remote-theme # add this line to the plugins list if you already have one
+# Optimize Jekyl SEO Tag
+twitter:
+  username: vszhub
+  card: summary
+logo: logo.png
+social:
+  name: Songzi Vong
+  links:
+    - https://twitter.com/vszhub
+    - https://github.com/vszhub
+google_site_verification: xxxxx
+lang: en
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# google_analytics: UA-000000-0
+
+# Replace this value and uncomment to enable Disqus
+# disqus: xxxxxx
+
+# Specify the author for blog posts
+author:
+  name: Songzi Vong
+  url: https://github.com/vszhub/
+  email: vszhub@gmail.com
