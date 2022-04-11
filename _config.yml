@@ -1,8 +1,9 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+title: Wassup's blog
+description: 끄적이든 기록하든 습관 들이기
+url: https://alstjq9295.github.io/blog
+show_downloads:   false
+avatar: /git_cat.jpeg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
@@ -27,19 +28,6 @@ exclude:
   - scripts/
   - not-pure-poole.gemspec
 
-# Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
-logo: logo.png
-social:
-  name: Songzi Vong
-  links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
-google_site_verification: xxxxx
-lang: en
-
 sass:
   sass_dir: _sass
   style: :compressed
@@ -54,6 +42,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Wassup
+  url: https://github.com/alstjq9295/
+  email: alstjq9295@gmail.com
