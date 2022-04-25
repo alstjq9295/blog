@@ -40,8 +40,7 @@ class RDB2ES:
             query = f"""
             SELECT id, title, contents, keyword, platform, writer, reg_date, crawl_url, comment_cnt, like_cnt
             FROM {self.rdb_table}
-            -- WHERE reg_date BETWEEN current_date - 1 AND current_date;
-            WHERE reg_date >= '2022-02-01'::date;
+            WHERE reg_date BETWEEN current_date - 1 AND current_date;
             """
             # 일별로 나눠야하지 않을까?
             # query = f"""
@@ -101,9 +100,9 @@ class RDB2ES:
         start_time = time.time()
         self.goal_date = goal_date
         self.goal_ym = self.goal_date[2:6]
-        self.rdb_table = f"t_naver_blog"
         # self.rdb_table = f"t_naver_blog_{self.goal_date}"
         # self.es_index = f"mbti_naver_blog_{self.goal_ym}"
+        self.rdb_table = f"t_naver_blog"
         self.es_index = f"mbti_naver_blog_2202"
         arguments = {
             "goal_date": self.goal_date,
