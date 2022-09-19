@@ -93,8 +93,9 @@ class Earthquake2ES:
                 'rms': row['rms'],
                 'gap': row['gap'],
                 'magType': row['magType'],
-                'location.longitude': row['longitude'],
-                'location.latitude': row['latitude'],
+                'location': [
+                  {'lat': row['latitude'], 'lon': row['longitude']}
+                ],
                 'depth': row['depth']
             }
             index = f'{self.index}_{self.start_time[2:4] + self.start_time[5:7]}'
@@ -149,3 +150,80 @@ if __name__ == '__main__':
         module = Earthquake2ES(start_time=start, end_time=end)
         module.run()
         print(f"[INFO] Elapsed time: {round(time.time() - s_time, 3)}")
+
+"""
+# Elasticsearch template
+PUT _template/template_earthquake
+{
+  "index_patterns" : [
+    "earthquake_*"
+  ],
+  "settings" : {
+    "index" : {
+      "analysis" : {
+        "analyzer" : {
+          "token_whitespace" : {
+            "filter" : [
+              "lowercase"
+            ],
+            "tokenizer" : "whitespace"
+          }
+        }
+      },
+      "number_of_shards" : "3",
+      "number_of_replicas" : "1"
+    }
+  },
+  "mappings" : {
+    "properties" : {
+      "title": {
+        "type": "text",
+        "analyzer" : "token_whitespace"
+      },
+      "place": {
+        "type": "text",
+        "analyzer" : "token_whitespace"
+      },
+      "time": {
+        "type": "date"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "mag": {
+        "type": "float"
+      },
+      "tsunami": {
+        "type": "keyword"
+      },
+      "code": {
+        "type": "keyword"
+      },
+      "ids": {
+        "type": "keyword"
+      },
+      "sources": {
+        "type": "keyword"
+      },
+      "rms": {
+        "type": "keyword"
+      },
+      "gap": {
+        "type": "keyword"
+      },
+      "magType": {
+        "type": "keyword"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "depth": {
+        "type": "float"
+      }
+    }
+  },
+  "aliases" : {
+    "earthquake" : { }
+  }
+}
+"""
