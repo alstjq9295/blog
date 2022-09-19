@@ -1,11 +1,17 @@
+__encode__ = 'UTF-8'
+__author__ = 'MS'
+__title__ = '22/3Q Study 지진 데이터 파싱 및 CSV 적재'
+"""
+* 수정이력
+    2022-09-07      MS    최초작성
+"""
 import json
 import time
 import requests
 import pandas as pd
-from datetime import datetime
 
 
-class MakeCSV:
+class Earthquake2CSV:
     def __init__(self, start_time, end_time):
         # self.start_time = datetime.strftime(start_time, '%Y-%m-%d')
         # self.end_time = datetime.strftime(end_time, '%Y-%m-%d')
@@ -60,6 +66,6 @@ if __name__ == '__main__':
     ]
     for start, end in date_list:
         s_time = time.time()
-        module = MakeCSV(start_time=start, end_time=end)
+        module = Earthquake2CSV(start_time=start, end_time=end)
         module.run()
         print(f"[INFO] Elapsed time: {round(time.time() - s_time, 3)}")
