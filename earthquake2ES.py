@@ -21,11 +21,12 @@ class Earthquake2ES:
         self.start_time = start_time
         self.end_time = end_time
         self.data = None
+        # 2022-10-06 ELK major version upgrade 7 -> 8
         self.es_host = '192.168.2.180'
         self.es_port = '9201'
-        # 2022-10-06 ELK major version upgrade 7 -> 8
+        # self.index = 'earthquake'
         self.full_es_host = f'http://elastic:kEir+tUAxwwy1hHeu*5z@{self.es_host}:9200/'
-        self.index = 'earthquake'
+        self.index = 'ms_earthquake'
 
     def get_data(self):
         default_url = 'https://earthquake.usgs.gov/fdsnws/event/1/query'
