@@ -23,6 +23,8 @@ class Earthquake2ES:
         self.data = None
         self.es_host = '192.168.2.180'
         self.es_port = '9201'
+        # 2022-10-06 ELK major version upgrade 7 -> 8
+        self.full_es_host = f'http://elastic:kEir+tUAxwwy1hHeu*5z@{self.es_host}:9200/'
         self.index = 'earthquake'
 
     def get_data(self):
@@ -101,7 +103,8 @@ class Earthquake2ES:
             index = f'{self.index}_{self.start_time[2:4] + self.start_time[5:7]}'
             action = {
               '_index': index,
-              '_type': '_doc',
+              # 2022-10-06 Elasticsearch 8.x 에서는 Bulk API 사용 시 _type 파라미터 불필요
+              # '_type': '_doc',
               '_op_type': 'index',
               '_source': document
             }
@@ -115,8 +118,10 @@ class Earthquake2ES:
 
         print(f"[DEBUG] Length of actions: {len(actions)}")
         es_conn = Elasticsearch(
-          hosts=self.es_host,
-          port=self.es_port,
+          # 2022-10-06 ELK major version upgrade 7 -> 8
+          # hosts=self.es_host,
+          # port=self.es_port,
+          hosts=self.full_es_host,
           timeout=25,
           max_retries=5,
           retry_on_timeout=True
